@@ -12,8 +12,8 @@ email=qgisgpt@xaisim.com
 
 about=QGISGPT is a QGIS plugin that simplifies QGIS workflows. It leverages OpenAI's ChatGPT to interpret natural language inputs, translating them into Python code that QGIS understands. QGIS tasks as now easy as typing out a sentence. Whether it's changing layer colors, querying data, or navigating projects, QGISGPT is like having a conversation with a QGIS veteran.
 
-tracker=https://github.com/javaftw/qgisgpt
-repository=https://github.com/javaftw/qgisgpt
+tracker=https://github.com/javaftw/qgisgpt_plugin
+repository=https://github.com/javaftw/qgisgpt_plugin
 # End of mandatory metadata
 
 # Recommended items:
@@ -25,7 +25,7 @@ hasProcessingProvider=no
 # Tags are comma separated with spaces allowed
 tags=ChatGPT
 
-homepage=https://xaisim.com/qgisgpt/
+homepage=https://xaisim.com/
 category=Plugins
 icon=icon.png
 # experimental flag

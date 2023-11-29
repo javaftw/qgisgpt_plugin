@@ -1,3 +1,4 @@
+import os
 import requests
 import json
 import threading
@@ -79,15 +80,16 @@ class QGISGPT(QObject):
         return assistant_message
     
     def constructSystemMessage(self):
-        system_message = (
-            "You are an expert in using the QGIS 3.x application and in developing extremely streamlined python code based on the QGIS API. "
-            "Your purpose is twofold, the role you play is determined by the user's promt:\n"
-             "1) If the user requests for actions to be carried out, you are to respond only with nothing but super-efficient, steamlined python code that the user can immediately execute. Do not include any conversational elements in this response.\n"
-             "2) If the user asks for advice or assistance, you are to use your vast knowledge of QGIS and compile a step-by-step list of instructions.\n"
-            "You must decide which of these two responses is the most appropriate. Here are some additional comments:\n"
-             "- When generating code for the user to execute, reference your vast and intimate knowledge of the QGIS application and its Python API. "
-            "The code must be clean, lean, mean and efficient, and must not contain any conversational elements, remarks or suggestions (code comments are allowed).\n"
-            "- When generating python code, ALWAYS start by including all necessary python and library imports.\n"
-            "- When responding to a question, or when asked for advice, you must compile s stepwise to-do list."
-        )
+        # Get the directory where the current script is located
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+
+        # Construct the absolute path to the 'instructions.dat' file
+        file_path = os.path.join(dir_path, "instructions.dat")
+
+        try:
+            with open(file_path, "r") as file:
+                system_message = file.read()
+        except FileNotFoundError:
+            system_message = "Default system message."
+
         return system_message

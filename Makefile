@@ -1,7 +1,7 @@
 #/***************************************************************************
-# GeoGPTPlugin
+# QGISGPTPlugin
 #
-# GeoLingua harnesses the power of ChatGPT to interpret natural language commands within QGIS. Simply describe your GIS tasks in natural language and let ChatGPT generate the Python code to execute them.
+# QGISGPT Plugin harnesses the power of ChatGPT to interpret natural language commands within QGIS. Simply describe your GIS tasks in natural language and let ChatGPT generate the Python code to execute them.
 #							 -------------------
 #		begin				: 2023-10-31
 #		git sha				: $Format:%H$
